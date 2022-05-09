@@ -1,7 +1,16 @@
 function recursiveSearch(arr, target) {
   // type your code here
-}
+  if (arr.length === 0) {
+    return false;
+  }
 
+  if (arr[0] === target) {
+    return true;
+  }
+
+  return recursiveSearch(arr.slice(1), target);
+}}
+// console.log(recursiveSearch([1,2,3], 5))
 if (require.main === module) {
   // add your own tests in here
   console.log("Expecting: true");
@@ -16,4 +25,5 @@ if (require.main === module) {
 module.exports = recursiveSearch;
 
 // Please add your pseudocode to this file
+// for all values of arr, look to match the input value, and return true if it does match
 // And a written explanation of your solution
